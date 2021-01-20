@@ -1,0 +1,55 @@
+﻿<Page x:Class="PointOfSale.EntreeSelection"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PointOfSale"
+      mc:Ignorable="d" 
+      Background="Lavender"
+      d:DesignHeight="500" d:DesignWidth="1000"
+      Title="EntreeSelection">
+
+    <WrapPanel>
+        <WrapPanel.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Width" Value="200"/>
+                <Setter Property="Height" Value="200"/>
+            </Style>
+        </WrapPanel.Resources>
+        <Button BorderThickness="4" BorderBrush="Blue" Background="White" Margin="10" Click="AddBrontowurst">
+            <DockPanel Height="185" Width="185" Background="White">
+                <TextBlock Text="Brontowurst" DockPanel.Dock="Bottom" TextAlignment="Center" FontWeight="Black"/>
+            </DockPanel>
+        </Button>
+        <Button BorderThickness="4" BorderBrush="Blue" Background="White" Margin="10" Click="AddDinoNuggets">
+            <DockPanel Height="185" Width="185" Background="White">
+                <TextBlock Text="Dino-Nuggets" DockPanel.Dock="Bottom" TextAlignment="Center" FontWeight="Black"/>
+            </DockPanel>
+        </Button>
+        <Button BorderThickness="4" BorderBrush="Blue" Background="White" Margin="10" Click="AddSteakosaurusBurger">
+            <DockPanel Height="185" Width="185" Background="White">
+                <TextBlock Text="Steakosaurus Burger" DockPanel.Dock="Bottom" TextAlignment="Center" FontWeight="Black"/>
+            </DockPanel>
+        </Button>
+        <Button BorderThickness="4" BorderBrush="Blue" Background="White" Margin="10" Click="AddTRexKingBurger">
+            <DockPanel Height="185" Width="185" Background="White">
+                <TextBlock Text="T-Rex King Burger" DockPanel.Dock="Bottom" TextAlignment="Center" FontWeight="Black"/>
+            </DockPanel>
+        </Button>
+        <Button BorderThickness="4" BorderBrush="Blue" Background="White" Margin="10" Click="AddPterodactylWings">
+            <DockPanel Height="185" Width="185" Background="White">
+                <TextBlock Text="Pterodactyl Wings" DockPanel.Dock="Bottom" TextAlignment="Center" FontWeight="Black"/>
+            </DockPanel>
+        </Button>
+        <Button BorderThickness="4" BorderBrush="Blue" Background="White" Margin="10" Click="AddPBJ">
+            <DockPanel Height="185" Width="185" Background="White">
+                <TextBlock Text="Prehistoric PB&amp;J" DockPanel.Dock="Bottom" TextAlignment="Center" FontWeight="Black"/>
+            </DockPanel>
+        </Button>
+        <Button BorderThickness="4" BorderBrush="Blue" Background="White" Margin="10" Click="AddVelociWrap">
+            <DockPanel Height="185" Width="185" Background="White">
+                <TextBlock Text="Veloci-Wrap" DockPanel.Dock="Bottom" TextAlignment="Center" FontWeight="Black"/>
+            </DockPanel>
+        </Button>
+    </WrapPanel>
+</Page>

@@ -1,0 +1,82 @@
+﻿@page
+@model Website.Pages.MenuModel
+@{
+    ViewData["Title"] = "Menu";
+}
+    <body style="background-color:black;color:white;">
+        <div id="container">
+            <div>
+                <h1>Menu</h1>
+                @foreach (DinoDiner.Menu.IMenuItem items in Model.MenuList)
+                {
+                    <div class="menu-item">
+                        <h4>@items.ToString() &emsp;&emsp;&emsp;&emsp;&emsp;$@items.Price</h4>
+                        <i> Calories: @items.Calories</i>
+                        <p>
+                            <b> Ingredients:</b>
+                            @foreach (string i in items.Ingredients)
+                            {
+                                <br>@i
+                            }
+                        </p>
+                        <hr>
+                    </div>
+                }
+
+                
+            </div>
+
+
+
+            <div class="checkbox-list">
+                <form method="post">
+                    <input type="text" name="search" value="@Model.Search" />
+                    <input type="submit" value="Search and Filter" />
+
+                    <h2>Menu Category</h2>
+                    <label>
+                        <input class="menu-category" type="checkbox" name="menuCategory" value="Combo" checked="@Model.menuCategory.Contains("Combo")" />
+                        Combo
+                    </label>
+                    <br>
+                    <label>
+                        <input class="menu-category" type="checkbox" name="menuCategory" value="Entree" checked="@Model.menuCategory.Contains("Entree")" />
+                        Entree
+                    </label>
+                    <br>
+                    <label>
+                        <input class="menu-category" type="checkbox" name="menuCategory" value="Side" checked="@Model.menuCategory.Contains("Side")" />
+                        Side
+                    </label>
+                    <br>
+                    <label>
+                        <input class="menu-category" type="checkbox" name="menuCategory" value="Drink" checked="@Model.menuCategory.Contains("Drink")" />
+                        Drink
+                    </label>
+
+                    <h4>Review Scores</h4>
+                    <label>
+                        Minimum Price:
+                        <input type="number" min="0" max="15" step="0.1" name="minimumPrice" id="minimum-price" value="@Model.minimumPrice"/>
+                    </label>
+                    <br>
+                    <label>
+                        Maximum Price:
+                        <input type="number" min="0" max="15" step="0.1" name="maximumPrice" id="maximum-price" value="@Model.maximumPrice"/>
+                    </label>
+
+                    <h4>Excluding Ingredients</h4>
+
+                    @foreach (string s in Model.Menu.PossibleIngredients)
+                    {
+                        <label>
+                            <input class="exclude-ingredient" type="checkbox" name="excludeIngredient" value="@s" checked="@Model.excludeIngredient.Contains(s)" />
+                            @s
+                        </label>
+                        <br>
+                    }
+
+                </form>
+                </div>
+            </div>
+</body>

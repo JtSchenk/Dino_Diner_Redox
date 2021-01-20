@@ -1,0 +1,31 @@
+﻿<Page x:Class="PointOfSale.FlavorSelection"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PointOfSale"
+      mc:Ignorable="d" 
+      Background="Lavender"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="FlavorSelection">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Click="MakeCherry" Grid.Row="0" Grid.Column="0" Margin="20" Background="Gray" FontWeight="UltraBlack" FontSize="20">Cherry</Button>
+        <Button Click="MakeChocolate" Grid.Row="1" Grid.Column="0" Margin="20" Background="Gray" FontWeight="UltraBlack" FontSize="20">Chocolate</Button>
+        <Button Click="MakeCola" Grid.Row="2" Grid.Column="0" Margin="20" Background="Gray" FontWeight="UltraBlack" FontSize="20">Cola</Button>
+        <Button Click="MakeLime" Grid.Row="0" Grid.Column="1" Margin="20" Background="Gray" FontWeight="UltraBlack" FontSize="20">Lime</Button>
+        <Button Click="MakeOrange" Grid.Row="1" Grid.Column="1" Margin="20" Background="Gray" FontWeight="UltraBlack" FontSize="20">Orange</Button>
+        <Button Click="MakeRootbeer" Grid.Row="2" Grid.Column="1" Margin="20" Background="Gray" FontWeight="UltraBlack" FontSize="20">Rootbeer</Button>
+        <Button Click="MakeVanilla" Grid.Row="3" Grid.Column="0" Margin="20" Background="Gray" FontWeight="UltraBlack" FontSize="20">Vanilla</Button>
+    </Grid>
+</Page>

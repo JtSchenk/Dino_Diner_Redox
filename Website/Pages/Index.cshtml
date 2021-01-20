@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <body style="background-color:black;color:white; text-align:center">
+
+        <p style="text-align:center;"><img src=" Images/DinoDiner-32.png" width="500" height="600" /></p>
+
+
+        <div class="row">
+            <div class="column"><a asp-page="Menu"> Menu</a></div>
+            <div class="column"><a asp-page="Privacy"> Privacy Policy</a></div>
+            <div class="column"><a asp-page="About"> About</a></div>
+        </div>
+    </body>
